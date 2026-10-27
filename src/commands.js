@@ -4,7 +4,7 @@ import { InlineKeyboard } from "grammy"
 const SERVICE_ID = 49
 const DEPARTMENT_ID = 37
 const API = "https://eqn.hsc.gov.ua/api/v2/equeue"
-const INTERVAL_MS =  2 * 1000
+const INTERVAL_MS =  10 * 60 * 1000
 
 const watchers = new Map()
 let timerStarted = false
