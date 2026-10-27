@@ -17,7 +17,10 @@ async function getJson(url) {
   })
 
   if (!response.ok) {
-    throw new Error(`API HTTP ${response.status}`)
+    const details = await response.text().catch(() => "")
+  throw new Error(
+    `API HTTP ${response.status}: ${details.slice(0, 300)}`
+  )
   }
 
   return response.json()
